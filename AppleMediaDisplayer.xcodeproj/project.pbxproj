@@ -23,6 +23,18 @@
 		30AC666522B3988800D3BE97 /* Lato-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 30AC665B22B3988800D3BE97 /* Lato-Light.ttf */; };
 		30AC666922B398E600D3BE97 /* AnimatableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AC666822B398E600D3BE97 /* AnimatableView.swift */; };
 		30AC666E22B399F600D3BE97 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AC666D22B399F600D3BE97 /* AppDelegate.swift */; };
+		30AC667122B3B91800D3BE97 /* MediaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AC667022B3B91800D3BE97 /* MediaTableViewCell.swift */; };
+		30AC667422B3BA8800D3BE97 /* MediaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AC667322B3BA8800D3BE97 /* MediaViewModel.swift */; };
+		30AC667722B3BB5500D3BE97 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AC667622B3BB5500D3BE97 /* Constants.swift */; };
+		30AC667922B3BBE400D3BE97 /* Unwrap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AC667822B3BBE400D3BE97 /* Unwrap.swift */; };
+		30AC667B22B3C2EB00D3BE97 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AC667A22B3C2EB00D3BE97 /* APIManager.swift */; };
+		30AC667D22B3C31B00D3BE97 /* TargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AC667C22B3C31B00D3BE97 /* TargetType.swift */; };
+		30AC667F22B3C33E00D3BE97 /* APConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AC667E22B3C33E00D3BE97 /* APConstants.swift */; };
+		30AC668122B3C38F00D3BE97 /* JSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AC668022B3C38F00D3BE97 /* JSON.swift */; };
+		30AC668322B3C3BF00D3BE97 /* BasicExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AC668222B3C3BF00D3BE97 /* BasicExtensions.swift */; };
+		30AC668522B3C59D00D3BE97 /* HomeEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AC668422B3C59D00D3BE97 /* HomeEndPoint.swift */; };
+		30AC668822B3ED7800D3BE97 /* MediaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AC668722B3ED7800D3BE97 /* MediaModel.swift */; };
+		30AC668A22B401C400D3BE97 /* MediaSectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AC668922B401C400D3BE97 /* MediaSectionTableViewCell.swift */; };
 		438EC92955609D4230C62542 /* Pods_AppleMediaDisplayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A93F035E80FA1A50D83C1F8D /* Pods_AppleMediaDisplayer.framework */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +57,18 @@
 		30AC665B22B3988800D3BE97 /* Lato-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Light.ttf"; sourceTree = "<group>"; };
 		30AC666822B398E600D3BE97 /* AnimatableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimatableView.swift; sourceTree = "<group>"; };
 		30AC666D22B399F600D3BE97 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		30AC667022B3B91800D3BE97 /* MediaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaTableViewCell.swift; sourceTree = "<group>"; };
+		30AC667322B3BA8800D3BE97 /* MediaViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaViewModel.swift; sourceTree = "<group>"; };
+		30AC667622B3BB5500D3BE97 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		30AC667822B3BBE400D3BE97 /* Unwrap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Unwrap.swift; sourceTree = "<group>"; };
+		30AC667A22B3C2EB00D3BE97 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		30AC667C22B3C31B00D3BE97 /* TargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetType.swift; sourceTree = "<group>"; };
+		30AC667E22B3C33E00D3BE97 /* APConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APConstants.swift; sourceTree = "<group>"; };
+		30AC668022B3C38F00D3BE97 /* JSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSON.swift; sourceTree = "<group>"; };
+		30AC668222B3C3BF00D3BE97 /* BasicExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicExtensions.swift; sourceTree = "<group>"; };
+		30AC668422B3C59D00D3BE97 /* HomeEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeEndPoint.swift; sourceTree = "<group>"; };
+		30AC668722B3ED7800D3BE97 /* MediaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaModel.swift; sourceTree = "<group>"; };
+		30AC668922B401C400D3BE97 /* MediaSectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaSectionTableViewCell.swift; sourceTree = "<group>"; };
 		40CE9073B67750C721E2A74F /* Pods-AppleMediaDisplayer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppleMediaDisplayer.debug.xcconfig"; path = "Target Support Files/Pods-AppleMediaDisplayer/Pods-AppleMediaDisplayer.debug.xcconfig"; sourceTree = "<group>"; };
 		7F028EA54055ED8A20CF5EA9 /* Pods-AppleMediaDisplayer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppleMediaDisplayer.release.xcconfig"; path = "Target Support Files/Pods-AppleMediaDisplayer/Pods-AppleMediaDisplayer.release.xcconfig"; sourceTree = "<group>"; };
 		A93F035E80FA1A50D83C1F8D /* Pods_AppleMediaDisplayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppleMediaDisplayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -87,6 +111,9 @@
 				30AC665022B3974C00D3BE97 /* API */,
 				30AC665122B3988800D3BE97 /* Fonts */,
 				30AC666622B398E600D3BE97 /* Helpers */,
+				30AC666F22B3B90900D3BE97 /* Cells */,
+				30AC667222B3BA7A00D3BE97 /* ViewModel */,
+				30AC668622B3ED6600D3BE97 /* Model */,
 				30AC664022B396FA00D3BE97 /* ViewController.swift */,
 				30AC664222B396FA00D3BE97 /* Main.storyboard */,
 				30AC664522B396FB00D3BE97 /* Assets.xcassets */,
@@ -126,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				30AC666722B398E600D3BE97 /* Utility */,
+				30AC667522B3BB4E00D3BE97 /* Constants */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -134,6 +162,9 @@
 			isa = PBXGroup;
 			children = (
 				30AC666822B398E600D3BE97 /* AnimatableView.swift */,
+				30AC667822B3BBE400D3BE97 /* Unwrap.swift */,
+				30AC668022B3C38F00D3BE97 /* JSON.swift */,
+				30AC668222B3C3BF00D3BE97 /* BasicExtensions.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -141,6 +172,9 @@
 		30AC666A22B399E400D3BE97 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				30AC667A22B3C2EB00D3BE97 /* APIManager.swift */,
+				30AC667C22B3C31B00D3BE97 /* TargetType.swift */,
+				30AC667E22B3C33E00D3BE97 /* APConstants.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -148,6 +182,7 @@
 		30AC666B22B399E400D3BE97 /* EndPoints */ = {
 			isa = PBXGroup;
 			children = (
+				30AC668422B3C59D00D3BE97 /* HomeEndPoint.swift */,
 			);
 			path = EndPoints;
 			sourceTree = "<group>";
@@ -158,6 +193,39 @@
 				30AC666D22B399F600D3BE97 /* AppDelegate.swift */,
 			);
 			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		30AC666F22B3B90900D3BE97 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				30AC667022B3B91800D3BE97 /* MediaTableViewCell.swift */,
+				30AC668922B401C400D3BE97 /* MediaSectionTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		30AC667222B3BA7A00D3BE97 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				30AC667322B3BA8800D3BE97 /* MediaViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		30AC667522B3BB4E00D3BE97 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				30AC667622B3BB5500D3BE97 /* Constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		30AC668622B3ED6600D3BE97 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				30AC668722B3ED7800D3BE97 /* MediaModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		E2AC6D81339BC8A53484BD37 /* Pods */ = {
@@ -268,6 +336,9 @@
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxRelay/RxRelay.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
@@ -276,6 +347,9 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxRelay.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -311,9 +385,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30AC667B22B3C2EB00D3BE97 /* APIManager.swift in Sources */,
+				30AC668122B3C38F00D3BE97 /* JSON.swift in Sources */,
+				30AC668322B3C3BF00D3BE97 /* BasicExtensions.swift in Sources */,
+				30AC667922B3BBE400D3BE97 /* Unwrap.swift in Sources */,
+				30AC668522B3C59D00D3BE97 /* HomeEndPoint.swift in Sources */,
+				30AC667422B3BA8800D3BE97 /* MediaViewModel.swift in Sources */,
+				30AC667D22B3C31B00D3BE97 /* TargetType.swift in Sources */,
 				30AC666E22B399F600D3BE97 /* AppDelegate.swift in Sources */,
 				30AC666922B398E600D3BE97 /* AnimatableView.swift in Sources */,
+				30AC668A22B401C400D3BE97 /* MediaSectionTableViewCell.swift in Sources */,
+				30AC667F22B3C33E00D3BE97 /* APConstants.swift in Sources */,
+				30AC668822B3ED7800D3BE97 /* MediaModel.swift in Sources */,
+				30AC667122B3B91800D3BE97 /* MediaTableViewCell.swift in Sources */,
 				30AC664122B396FA00D3BE97 /* ViewController.swift in Sources */,
+				30AC667722B3BB5500D3BE97 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

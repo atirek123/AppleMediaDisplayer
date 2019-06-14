@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RxSwift
 
 class ViewController: UIViewController {
     
@@ -17,6 +18,8 @@ class ViewController: UIViewController {
     let navView = AnimatableView()
     let topTitleLabel = UILabel()
     let tableView = UITableView()
+    let viewModel = MediaViewModel()
+    let disposeBag = DisposeBag()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,11 +37,12 @@ extension ViewController {
         createTitleView()
         addTitleLabel()
         addTableView()
+        bindings()
+        viewModel.getAppleMedia()
     }
     
     //MARK: - Create Title View
     func createTitleView() {
-        
         
         navView.translatesAutoresizingMaskIntoConstraints = false
         navView.shadowOffset = CGSize(width: 0, height: 2.0)
@@ -83,9 +87,11 @@ extension ViewController {
         
         topTitleLabel.text = "Apple Media Lists"
         topTitleLabel.translatesAutoresizingMaskIntoConstraints = false
-        topTitleLabel.font = UIFont(name: "Lato-Bold", size: 20.0)
+        topTitleLabel.font = UIFont.systemFont(ofSize: 20)
         topTitleLabel.textColor = UIColor.black.withAlphaComponent(70.0)
         navView.addSubview(topTitleLabel)
+        
+        /// adding constraint using NSLayoutConstraint
         let horizontalConstraint = NSLayoutConstraint(item: topTitleLabel,
                                                       attribute: .centerX,
                                                       relatedBy: .equal,
@@ -136,6 +142,35 @@ extension ViewController {
                                                   multiplier: 1,
                                                   constant: 0)
         view.addConstraints([topConstraint,leadingConstraint,trailingConstraint,bottomConstraint])
+        view.sendSubviewToBack(tableView)
+    }
+    
+    //MARK: - Bindings
+    func bindings() {
+        tableView.register(MediaTableViewCell.self, forCellReuseIdentifier: CellIdentifiers.mediaCell.identifier)
+        tableView.register(MediaSectionTableViewCell.self, forCellReuseIdentifier: CellIdentifiers.medisSectionCell.identifier)
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.separatorStyle = .none
+        tableView.contentInset = UIEdgeInsets(top: 8, left: 0, bottom: 16, right: 0)
+
+        /// for sections
+        viewModel.items.asObservable().bind(to: tableView.rx.items) { (tableView, index, model) -> UITableViewCell in
+            
+            let indexPath = IndexPath(row: index, section: 0)
+            if model.isSection{
+                guard let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.medisSectionCell.identifier, for: indexPath ) as? MediaSectionTableViewCell else{
+                    return UITableViewCell()
+                }
+                cell.mediaType = /model.mediaType?.type
+                return cell
+            }
+            
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifiers.mediaCell.identifier, for: indexPath ) as? MediaTableViewCell else{
+                return UITableViewCell()
+            }
+            cell.item = model
+            return cell
+        }<disposeBag
     }
 }
 

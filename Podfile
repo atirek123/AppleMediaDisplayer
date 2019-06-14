@@ -9,5 +9,7 @@ target 'AppleMediaDisplayer' do
   pod 'Alamofire'
   pod 'ObjectMapper'
   pod 'Kingfisher'
+  pod 'RxSwift'
+  pod 'RxCocoa'
 
 end
