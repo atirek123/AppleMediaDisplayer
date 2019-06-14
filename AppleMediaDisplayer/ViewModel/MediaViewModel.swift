@@ -56,6 +56,7 @@ class MediaViewModel{
     
     var items = BehaviorRelay<[MediaModel]>(value:[])
     
+    var apiCompleted:((Bool) -> Void)?
     
     //MARK: - Get Media
     func getAppleMedia() {
@@ -119,6 +120,8 @@ class MediaViewModel{
         array.append(mediaModel)
         array.append(contentsOf: /object.feed?.results)
         self.items.accept(array)
+        
+        self.apiCompleted?(true)
     }
     
 }

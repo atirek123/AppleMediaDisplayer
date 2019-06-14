@@ -9,6 +9,7 @@
 import UIKit
 import RxSwift
 
+
 class ViewController: UIViewController {
     
     //MARK: - Variables
@@ -20,6 +21,7 @@ class ViewController: UIViewController {
     let tableView = UITableView()
     let viewModel = MediaViewModel()
     let disposeBag = DisposeBag()
+    let loadingView = UIView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,6 +40,8 @@ extension ViewController {
         addTitleLabel()
         addTableView()
         bindings()
+        addLoadingView()
+        observeAPICompletion()
         viewModel.getAppleMedia()
     }
     
@@ -142,7 +146,6 @@ extension ViewController {
                                                   multiplier: 1,
                                                   constant: 0)
         view.addConstraints([topConstraint,leadingConstraint,trailingConstraint,bottomConstraint])
-        view.sendSubviewToBack(tableView)
     }
     
     //MARK: - Bindings
@@ -171,6 +174,40 @@ extension ViewController {
             cell.item = model
             return cell
         }<disposeBag
+    }
+    
+    //MARK: - Add Loading View
+    func addLoadingView() {
+        loadingView.translatesAutoresizingMaskIntoConstraints = false
+        loadingView.backgroundColor = .white
+        view.addSubview(loadingView)
+        
+        loadingView.topAnchor.constraint(equalTo: navView.bottomAnchor, constant: 0.0).isActive = true
+        loadingView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0.0).isActive = true
+        loadingView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0.0).isActive = true
+        loadingView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0.0).isActive = true
+        
+        DispatchQueue.main.async {
+            let activityIndicator = UIActivityIndicatorView(style: .whiteLarge)
+            activityIndicator.color = .darkGray
+            self.loadingView.addSubview(activityIndicator)
+            activityIndicator.translatesAutoresizingMaskIntoConstraints = false
+            activityIndicator.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+            
+            activityIndicator.centerXAnchor.constraint(equalTo: self.view.centerXAnchor, constant: 0).isActive = true
+            activityIndicator.centerYAnchor.constraint(equalTo: self.view.centerYAnchor, constant: 0).isActive = true
+            
+            activityIndicator.startAnimating()
+        }
+        view.bringSubviewToFront(navView)
+        
+    }
+    
+    //MARK: - Observe API Completion
+    func observeAPICompletion() {
+        viewModel.apiCompleted = { bool in
+           self.loadingView.isHidden = true
+        }
     }
 }
 
